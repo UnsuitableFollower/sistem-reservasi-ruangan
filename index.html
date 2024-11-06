@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservasi Ruangan Kelas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">Reservasi Ruangan Kelas</h1>
+
+        <!-- Daftar Ruangan -->
+        <section id="room-list" class="mb-5">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="mb-0">Daftar Ruangan</h2>
+                </div>
+                <div class="card-body">
+                    <table id="room-table" class="table table-striped table-bordered">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Nomor Ruangan</th>
+                                <th>Kapasitas</th>
+                                <th>Status Ketersediaan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Ruangan akan ditampilkan di sini -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulir Reservasi -->
+        <section id="reservation-form" class="mb-5">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h2 class="mb-0">Formulir Reservasi</h2>
+                </div>
+                <div class="card-body">
+                    <form id="reserve-room-form">
+                        <div class="form-group">
+                            <label for="name">Nama Pemesan:</label>
+                            <input type="text" class="form-control" id="name" placeholder="Masukkan nama pemesan" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="room-number">Nomor Ruangan:</label>
+                            <input type="number" class="form-control" id="room-number" placeholder="Masukkan nomor ruangan" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Tanggal Reservasi:</label>
+                            <input type="date" class="form-control" id="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="start-time">Waktu Mulai:</label>
+                            <input type="time" class="form-control" id="start-time" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="duration">Durasi (jam):</label>
+                            <input type="number" class="form-control" id="duration" placeholder="Masukkan durasi" required min="1">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Reservasi</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Daftar Reservasi -->
+        <section id="reservation-list" class="mb-5">
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h2 class="mb-0">Daftar Reservasi</h2>
+                </div>
+                <div class="card-body">
+                    <ul id="reservations" class="list-group">
+                        <!-- Reservasi akan ditampilkan di sini -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
